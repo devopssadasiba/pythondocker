@@ -14,10 +14,10 @@ RUN pip install --no-cache-dir -r requirements.txt
 COPY app.py .
 
 # Expose the port the Flask application will run on
-EXPOSE 6000
+EXPOSE 3000
 
 # Command to run the Flask application when the container starts
 CMD ["python", "app.py"]
 
 # docker build . -t sadasiba/python-app
-# docker run -p6000:6000 sadasiba/python-app
+# docker run -d -p6000:6000 sadasiba/python-app
