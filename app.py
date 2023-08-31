@@ -1,6 +1,7 @@
 # app.py
 
 from flask import Flask
+from waitress import serve
 
 app = Flask(__name__)
 
@@ -15,4 +16,5 @@ def greet(name):
     return f'Hello, {name}! Welcome to Flask on Docker.'
 
 if __name__ == '__main__':
-    app.run(host='0.0.0.0', port=6000)
+    # app.run(host='0.0.0.0', port=6000)
+    serve(app, host="0.0.0.0", port=6000)

@@ -18,3 +18,6 @@ EXPOSE 6000
 
 # Command to run the Flask application when the container starts
 CMD ["python", "app.py"]
+
+# docker build . -t sadasiba/python-app
+# docker run -p6000:6000 sadasiba/python-app
